@@ -11,7 +11,7 @@
                 @if ($hasil == 'Normal')
                     <p class="text-red font-semibold text-lg txtshdw tracking-wide text-center">
                         Berdasarkan atas tingkatan kondisi yang dialami sesuai dengan gejala yang ada,
-                        anda diprediksi <span class="text-yellow-800">tidak menderita penyakit Thalassemia</span> karena
+                        anda diprediksi <span class="text-yellow-800">Tidak Menderita Penyakit Thalassemia</span> karena
                         tingkat kepercayaan
                         {{ floor($persen * 100) }}%.
                         meskipun anda memiliki keluarga dengan riwayat Thalassemia.
@@ -74,7 +74,7 @@
             @if (!isset($hasil))
                 {{-- SEHAT --}}
                 <div class="my-2 text-red text-lg font-semibold txtshdw text-center txtshdw">
-                    Selamat, anda <span class="text-yellow-800">tidak menderita Thalassemia</span>. Usahakan untuk tetap
+                    Selamat, anda <span class="text-yellow-800">Tidak Menderita Thalassemia</span>. Usahakan untuk tetap
                     melakukan screening
                     terhadap pasangan anda sebelum melakukan pernikahan, untuk mencegah
                     terjadinya Thalassemia pada generasi anda selanjutnya.

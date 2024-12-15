@@ -26,7 +26,7 @@
                     <div>
                         @if (Str::contains($gejala->namagejala, 'Transfusi'))
                             <p class="text-red">Apakah Anda pernah melakukan
-                                <strong>{{ $gejala->namagejala }}?</strong> (selain karena kecelakaan, operasi dan
+                                <strong>{{ $gejala->namagejala }}</strong> ? (selain karena kecelakaan, operasi dan
                                 melahirkan)
                             </p>
                             <div class="flex flex-col gap-2 mt-2">

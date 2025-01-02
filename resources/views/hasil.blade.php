@@ -150,8 +150,6 @@
                 }
             }
         })
-        // cek ebstResult semisal dia mayor/indtermedai nanti munculin popu kalo engga nanti langsung next aja
-
-        // perlu tambah kolom nama penyakit di tabel hasil?? -> nanti yg dicetak dan disave ke db hasil akhir ini
+        
     </script>
 @endpush

@@ -36,7 +36,7 @@ class AnggotaController extends Controller
      */
     public function create()
     {
-        return view('admin.tambah', ["name" => "Pengguna"]); // Menampilkan form untuk tambah pengguna baru
+        return view('admin.tambah-pengguna', ["name" => "Pengguna"]); // Menampilkan form untuk tambah pengguna baru
     }
 
     /**
@@ -52,7 +52,6 @@ class AnggotaController extends Controller
             'name' => 'required',
             'email' => 'required',
             'password' => 'required',
-            'role' => 'required',
         ]);
 
         // Membuat pengguna baru dengan data yang telah divalidasi
@@ -60,7 +59,7 @@ class AnggotaController extends Controller
             'name' => $request['name'],
             'email' => $request['email'],
             'password' => Hash::make($request['password']), // Hashing password
-            'role' => $request['role'],
+            'role' => 'user',
         ]);
 
         // Redirect ke halaman indeks pengguna dengan pesan sukses

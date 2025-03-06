@@ -33,7 +33,7 @@
 
         <h1
             style="text-align:center; color:#E61919; font-family:roboto; font-weight:bold; font-size:24px; margin-top:60px; margin-bottom:77px; text-shadow:1px 1px 2px #E9A178; line-height:40px;">
-            Selamat, anda tidak menderita Thalassemia. Usahakan untuk tetap melakukan screening<br>terhadap pasangan
+            Selamat, anda Tidak Menderita Thalassemia. Usahakan untuk tetap melakukan screening<br>terhadap pasangan
             anda sebelum melakukan pernikahan, untuk mencegah<br>terjadinya Thalassemia pada generasi anda selanjutnya.
         </h1>
         <!--isi kesimpulan sehat-->

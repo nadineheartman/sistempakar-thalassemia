@@ -6,7 +6,7 @@
             <h1 class="text-center login !text-3xl">REGISTRASI AKUN</h1>
             <div class="max-w-[800px] w-full rounded-[12px] bg-white bg-opacity-70 px-10 py-10 grid md:grid-cols-2">
                 <div class="flex flex-col items-center justify-center">
-                    <form method="POST" action="{{ route('register') }}" class="w-full flex flex-col gap-4 items-center">
+                    <form method="POST" action="{{ route('admin.pengguna.store') }}" class="w-full flex flex-col gap-4 items-center">
                         @csrf
                         <div class="w-full">
                             <label class="text-red mb-1" for="">Nama</label>
@@ -48,10 +48,10 @@
 
                         <button type="submit" class="mt-8 btn w-fit text-white px-10">DAFTAR</button>
 
-                        <p class="tracking-widest text-orange">
+                        {{-- <p class="tracking-widest text-orange">
                             Sudah memiliki akun?
                             <a href="{{ route('login') }}" class="font-bold underline">Login Sekarang</a>
-                        </p>
+                        </p> --}}
                     </form>
                 </div>
                 <div class="flex items-center justify-center">

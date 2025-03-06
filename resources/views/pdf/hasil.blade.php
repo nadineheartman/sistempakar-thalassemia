@@ -153,7 +153,7 @@
             </div>
         @elseif($hasil->result_penyakit == 'Normal')
             <div class="text-red text-xl font-semibold text-center txtshdw mt-3 max-w-[600px] mx-auto">
-                Anda diprediksi <span class="text-yellow-800">tidak menderita penyakit Thalassemia</span> karena tingkat
+                Anda diprediksi <span class="text-yellow-800">Tidak Menderita Penyakit Thalassemia</span> karena tingkat
                 kepercayaan 0%. meskipun anda
                 memiliki keluarga dengan riwayat Thalassemia.
 
@@ -162,7 +162,7 @@
             </div>
         @elseif($hasil->result_penyakit == 'Sehat')
             <div class="text-red text-xl font-semibold text-center txtshdw mt-3 max-w-[600px] mx-auto">
-                Selamat, anda <span class="text-yellow-800">tidak menderita penyakit Thalassemia</span>. Usahakan untuk
+                Selamat, anda <span class="text-yellow-800">Tidak Menderita Penyakit Thalassemia</span>. Usahakan untuk
                 tetap melakukan screening terhadap pasangan anda
                 sebelum melakukan pernikahan, untuk mencegah terjadinya Thalassemia pada generasi anda selanjutnya.
             </div>

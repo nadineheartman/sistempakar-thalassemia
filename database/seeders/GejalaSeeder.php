@@ -26,7 +26,7 @@ class GejalaSeeder extends Seeder
             ['kodegejala' => 9, 'namagejala' => "Perubahan wajah (facies cooley)"],
             ['kodegejala' => 10, 'namagejala' => "Hiperpigmentasi (kulit gelap)"],
             ['kodegejala' => 11, 'namagejala' => "Gangguan pubertas"],
-            ['kodegejala' => 12, 'namagejala' => "Pernah Transfusi darah?"],
+            ['kodegejala' => 12, 'namagejala' => "Transfusi darah"],
         ];
 
         DB::table('gejalas')->insert($gejalas);

@@ -7,10 +7,13 @@ use App\Http\Controllers\Admin\PenyakitController;
 use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ScreeningController;
+use App\Models\User;
+use Illuminate\Auth\Events\Verified;
 use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,14 +67,34 @@ Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
 
 // Email Verification Route
 Route::get('/email/verify', function () {
+    $user = Auth::user();
+
+    if ($user->email_verified_at) {
+        return redirect('/home')->with("success", "Email sudah diverifikasi sebelumnya.");
+    }
+
     return view('verify-email');
 })->middleware('auth')->name('verification.notice');
 
-Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
-    $request->fulfill();
+Route::get('/email/verify/{id}/{hash}', function (Request $request, $id, $hash) {
+    $user = User::findOrFail($id);
+
+    // Check if email is already verified
+    if ($user->hasVerifiedEmail()) {
+        return redirect('/home')->with("success", "Email sudah diverifikasi sebelumnya.");
+    }
+
+    // Validate the hash
+    if (!hash_equals(sha1($user->getEmailForVerification()), $hash)) {
+        abort(403, 'Token tidak valid');
+    }
+
+    // Mark email as verified
+    $user->markEmailAsVerified();
+    event(new Verified($user));
 
     return redirect('/home')->with("success", "Email berhasil diverifikasi!");
-})->middleware(['auth', 'signed'])->name('verification.verify');
+})->middleware('signed')->name('verification.verify');
 
 Route::post('/email/verification-notification', function (Request $request) {
     $request->user()->sendEmailVerificationNotification();

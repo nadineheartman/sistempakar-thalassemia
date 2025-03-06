@@ -10,15 +10,30 @@
                         class="w-full flex flex-col gap-6 items-center">
                         @csrf
                         @method('PUT')
-                        <input value="{{ $pengguna->name }}" required name="name" type="text" placeholder="Nama"
-                            class="input admin mx-auto">
-                        <input value="{{ $pengguna->email }}" required name="email" type="email" placeholder="Email"
-                            class="input admin mx-auto">
-                        <input value="{{ $pengguna->role ?? 'user' }}" required name="role" type="text"
-                            placeholder="Role" class="input admin mx-auto">
-                        <input required name="password" type="password" placeholder="Password" class="input admin mx-auto">
-                        <input required name="confirm_password" type="password" placeholder="Confirm Password"
-                            class="input admin mx-auto">
+                        <div class="w-full">
+                            <label class="text-red mb-1" for="">Nama</label>
+                            <input value="{{ $pengguna->name }}" required name="name" type="text" placeholder="Nama"
+                                class="input admin mx-auto">
+                            </div>
+                            <div class="w-full">
+                                <label class="text-red mb-1" for="">Email</label>
+                                <input value="{{ $pengguna->email }}" required name="email" type="email" placeholder="Email"
+                                    class="input admin mx-auto">
+                        </div>
+                        <div class="w-full">
+                            <label class="text-red mb-1" for="">Role</label>
+                            <input value="{{ $pengguna->role ?? 'user' }}" required name="role" type="text"
+                                placeholder="Role" class="input admin mx-auto">
+                        </div>
+                        <div class="w-full">
+                            <label class="text-red mb-1" for="">Password</label>
+                            <input required name="password" type="password" placeholder="Password" class="input admin mx-auto">
+                        </div>
+                        <div class="w-full">
+                            <label class="text-red mb-1" for="">Konfirmasi Password</label>
+                            <input required name="confirm_password" type="password" placeholder="Confirm Password"
+                                class="input admin mx-auto">
+                        </div>
 
                         <button class="mt-8 btn text-xl px-12 py-4">SIMPAN</button>
                     </form>

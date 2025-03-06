@@ -10,10 +10,17 @@
                         class="w-full flex flex-col gap-6 items-center">
                         @csrf
                         @method('PUT')
-                        <input required value="G{{$gejala->kodegejala < 9 && '0'}}{{ $gejala->kodegejala }}" name="kodegejala" type="text"
-                            placeholder="Kode gejala" class="input admin mx-auto">
-                        <input required value="{{ $gejala->namagejala }}" name="namagejala" type="text"
-                            placeholder="Nama gejala" class="input admin mx-auto">
+                        <div class="w-full">
+                            <label class="text-red mb-1" for="">Kode Gejala</label>
+                            <input required value="G{{$gejala->kodegejala < 9 && '0'}}{{ $gejala->kodegejala }}" name="kodegejala" type="text"
+                                placeholder="Kode gejala" class="input admin mx-auto">
+                        </div>
+
+                        <div class="w-full">
+                            <label class="text-red mb-1" for="">Nama Gejala</label>
+                            <input required value="{{ $gejala->namagejala }}" name="namagejala" type="text"
+                                placeholder="Nama gejala" class="input admin mx-auto">
+                        </div>
 
                         <button class="mt-8 btn text-xl px-12 py-4">SIMPAN</button>
                     </form>

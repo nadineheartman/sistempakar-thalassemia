@@ -10,26 +10,35 @@
                         class="w-full flex flex-col gap-6 items-center">
                         @csrf
                         @method('PUT')
-                        <select required class="input admin mx-auto" name="penyakit_id" id="">
-                            <option value="" disabled>Kode Penyakit</option>
-                            @foreach ($penyakits as $penyakit)
-                                <option {{ $penyakit->id === $pengetahuan->penyakit->id ? 'selected' : '' }}
-                                    value="{{ $penyakit->id }}">P0{{ $penyakit->id }} -
-                                    {{ $penyakit->namapenyakit }}</option>
-                            @endforeach
-                        </select>
+                        <div class="w-full">
+                            <label class="text-red mb-1" for="">Kode Penyakit</label>
+                            <select required class="input admin mx-auto" name="penyakit_id" id="">
+                                <option value="" disabled>Kode Penyakit</option>
+                                @foreach ($penyakits as $penyakit)
+                                    <option {{ $penyakit->id === $pengetahuan->penyakit->id ? 'selected' : '' }}
+                                        value="{{ $penyakit->id }}">P0{{ $penyakit->id }} -
+                                        {{ $penyakit->namapenyakit }}</option>
+                                @endforeach
+                            </select>
+                        </div>
 
-                        <select required class="input admin mx-auto" name="gejala_id" id="">
-                            <option value="" disabled>Kode Gejala</option>
-                            @foreach ($gejalas as $gejala)
-                                <option {{ $gejala->id === $pengetahuan->gejala->id ? 'selected' : '' }}
-                                    value="{{ $gejala->id }}">
-                                    {{ 'G' . str_pad($gejala->kodegejala, 2, '0', STR_PAD_LEFT) }}</option>
-                            @endforeach
-                        </select>
+                        <div class="w-full">
+                            <label class="text-red mb-1" for="">Kode Gejala</label>
+                            <select required class="input admin mx-auto" name="gejala_id" id="">
+                                <option value="" disabled>Kode Gejala</option>
+                                @foreach ($gejalas as $gejala)
+                                    <option {{ $gejala->id === $pengetahuan->gejala->id ? 'selected' : '' }}
+                                        value="{{ $gejala->id }}">
+                                        {{ 'G' . str_pad($gejala->kodegejala, 2, '0', STR_PAD_LEFT) }}</option>
+                                @endforeach
+                            </select>
+                        </div>
 
-                        <input value="{{ $pengetahuan->nilai_cf }}" required name="nilai_cf" type="text"
-                            placeholder="Nilai CF" class="input admin mx-auto">
+                        <div class="w-full">
+                            <label class="text-red mb-1" for="">Kode Penyakit</label>
+                            <input value="{{ $pengetahuan->nilai_cf }}" required name="nilai_cf" type="text"
+                                placeholder="Nilai CF" class="input admin mx-auto">
+                        </div>
 
                         <button class="mt-8 btn text-xl px-12 py-4">SIMPAN</button>
                     </form>

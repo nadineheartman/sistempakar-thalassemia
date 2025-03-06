@@ -10,10 +10,16 @@
                         class="w-full flex flex-col gap-6 items-center">
                         @csrf
                         @method('PUT')
-                        <input required value="P0{{ $penyakit->kodepenyakit }}" name="kodepenyakit" type="text"
-                            placeholder="Kode penyakit" class="input admin mx-auto">
-                        <input required value="{{ $penyakit->namapenyakit }}" name="namapenyakit" type="text"
-                            placeholder="Nama penyakit" class="input admin mx-auto">
+                        <div class="w-full">
+                            <label class="text-red mb-1" for="">Kode Penyakit</label>
+                            <input required value="P0{{ $penyakit->kodepenyakit }}" name="kodepenyakit" type="text"
+                                placeholder="Kode penyakit" class="input admin mx-auto">
+                        </div>
+                        <div class="w-full">
+                            <label class="text-red mb-1" for="">Nama Penyakit</label>
+                            <input required value="{{ $penyakit->namapenyakit }}" name="namapenyakit" type="text"
+                                placeholder="Nama penyakit" class="input admin mx-auto">
+                        </div>
 
                         <button class="mt-8 btn text-xl px-12 py-4">SIMPAN</button>
                     </form>

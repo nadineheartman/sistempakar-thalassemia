@@ -15,7 +15,8 @@
                     <form action="{{ route('login') }}" method="POST" class="mt-5 w-full flex flex-col gap-6 items-center">
                         @csrf
                         <div class="w-full">
-                            <input required name="email" type="email" placeholder="Email" class="input mx-auto w-full">
+                            <label class="text-red mb-1" for="">Email</label>
+                            <input required name="email" type="email" placeholder="Masukkan email" class="input mx-auto w-full">
                             @error('email')
                                 <span class="text-sm mt-1 text-white text-opacity-80" role="alert">
                                     {{ $message }}
@@ -23,7 +24,8 @@
                             @enderror
                         </div>
                         <div class="w-full">
-                            <input required name="password" type="password" placeholder="Password"
+                            <label class="text-red mb-1" for="">Password</label>
+                            <input required name="password" type="password" placeholder="Masukkan password"
                                 class="input mx-auto w-full">
                             @error('password')
                                 <span class="text-sm mt-1 text-white text-opacity-80" role="alert">

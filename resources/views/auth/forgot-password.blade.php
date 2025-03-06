@@ -12,7 +12,7 @@
                     <form action="{{ route('password.email') }}" method="POST"
                         class="w-full flex flex-col gap-2 items-center">
                         @csrf
-                        <h1 class="text-3xl font-bold text-orange">Forgot Password</h1>
+                        <h1 class="text-3xl font-bold text-orange">Lupa Password</h1>
                         <p class="text-lg text-slate-700">Sistem Pakar Thalassemia</p>
                         <p class="mt-7 text-orange">Silahkan tulis emailmu di sini untuk mengirimkan link untuk mereset
                             password</p>

@@ -34,8 +34,8 @@
         </h1>
         <h1
             style="text-align:center; color:#A84448; font-family:roboto; font-weight:bold; font-size:30px; margin-top:80px; text-shadow:2px 2px 2px #E9A178; line-height:50px;">
-            Berdasarkan atas tingkatan kondisi yang dialami sesuai dengan gejala yang ada,<br>anda diprediksi tidak
-            menderita penyakit Thalassemia karena tingkat kepercayaan ...%,<br>meskipun anda memiliki keluarga dengan
+            Berdasarkan atas tingkatan kondisi yang dialami sesuai dengan gejala yang ada,<br>anda diprediksi Tidak
+            Menderita Penyakit Thalassemia karena tingkat kepercayaan ...%,<br>meskipun anda memiliki keluarga dengan
             riwayat Thalassemia.
         </h1>
 

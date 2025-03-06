@@ -49,7 +49,7 @@
                                 <td class="border-[1px] border-orange px-3">
                                     @if (isset($user->last_result) && $user->last_result)
                                         <a class="underline" href="/hasil/{{ $user->last_result }}">
-                                            {{ $user->hasil->result_penyakit }}
+                                            {{ $user->hasil->result_penyakit ?? '' }}
                                         </a>
                                     @else
                                         -
